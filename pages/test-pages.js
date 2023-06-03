@@ -1,4 +1,4 @@
-import Home from "@/components/ui/Home";
+import Home from "@/components/ui/home.js";
 import Head from "next/head";
 
 export default function TestPages() {

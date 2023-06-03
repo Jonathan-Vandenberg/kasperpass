@@ -8,7 +8,7 @@
   }
 
   :root {
-    --background: 0 0% 100%;
+    --background: 250, 250, 250;
     --foreground: 222.2 47.4% 11.2%;
 
     --muted: 210 40% 96.1%;
@@ -80,6 +80,7 @@
 @layer base {
   * {
     @apply border-border;
+    outline: none;
   }
   body {
     @apply bg-background text-foreground;

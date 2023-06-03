@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import LeftHamburger from "../svg/left-hamburger";
 import Shield from "../svg/shield";
 import Boxes from "../svg/boxes";
@@ -20,78 +21,89 @@ import Bank from "../svg/bank";
 import Education from "../svg/education";
 import Career from "../svg/career";
 import Transactions from "../svg/transactions";
+import Settings from "../svg/settings";
 
 export default function Nav() {
   return (
-    <div className="h-[161px] w-full bg-gradient-to-r from-navGradient-start to-navGradient-end px-3 flex flex-col items-center justify-evenly">
-      <div className="flex items-center justify-between w-full">
-        <DropdownMenu>
-          <DropdownMenuTrigger>
-            <LeftHamburger />
-          </DropdownMenuTrigger>
-          <DropdownMenuContent className="ml-5 py-4 px-2">
-            <DropdownMenuLabel className="">
-              Triana Sofía González
-            </DropdownMenuLabel>
-            <div className="space-y-2">
-              <DropdownMenuSeparator />
+    <div className="h-[130px] w-full bg-gradient-to-r from-navGradient-start to-navGradient-end px-3 flex items-center justify-between">
+      <DropdownMenu>
+        <DropdownMenuTrigger>
+          <LeftHamburger />
+        </DropdownMenuTrigger>
+        <DropdownMenuContent className="ml-5 py-4 px-2 mt-3">
+          <DropdownMenuLabel className="">
+            Triana Sofía González
+          </DropdownMenuLabel>
+          <div className="space-y-2 text-slate-700">
+            <DropdownMenuSeparator className="bg-gray-300" />
+            <Link href="/identification">
               <DropdownMenuItem>
                 <div className="space-x-2 flex">
                   <Identification />
                   <p>Identification</p>
                 </div>
               </DropdownMenuItem>
+            </Link>
+            <Link href="/residence">
               <DropdownMenuItem>
                 <div className="space-x-2 flex">
                   <Residence />
                   <p>Residence</p>
                 </div>
               </DropdownMenuItem>
+            </Link>
+            <Link href="/passport">
               <DropdownMenuItem>
                 <div className="space-x-2 flex">
                   <Passport />
                   <p>Passport</p>
                 </div>
               </DropdownMenuItem>
+            </Link>
+            <Link href="/banking">
               <DropdownMenuItem>
                 <div className="space-x-2 flex">
                   <Bank />
                   <p>Banking</p>
                 </div>
               </DropdownMenuItem>
+            </Link>
+            <Link href="education">
               <DropdownMenuItem>
                 <div className="space-x-2 flex">
                   <Education />
                   <p>Education</p>
                 </div>
               </DropdownMenuItem>
+            </Link>
+            <Link href="/career">
               <DropdownMenuItem>
                 <div className="space-x-2 flex">
                   <Career />
                   <p>Career</p>
                 </div>
               </DropdownMenuItem>
+            </Link>
+            <Link href="transactions">
               <DropdownMenuItem>
                 <div className="space-x-2 flex">
                   <Transactions />
                   <p>Transactions</p>
                 </div>
               </DropdownMenuItem>
-            </div>
-          </DropdownMenuContent>
-        </DropdownMenu>
+            </Link>
+            <Link href="/settings">
+              <DropdownMenuItem>
+                <div className="space-x-2 flex">
+                  <Settings />
+                  <p>Settings</p>
+                </div>
+              </DropdownMenuItem>
+            </Link>
+          </div>
+        </DropdownMenuContent>
+      </DropdownMenu>
 
-        <p className="font-medium tracking-widest text-md text-white">Home</p>
-
-        <div className="relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full">
-          <Image
-            src={image}
-            width={500}
-            height={500}
-            alt="Picture of the author"
-          />
-        </div>
-      </div>
       <div className="flex items-center space-x-1">
         <div className="relative">
           <div className="text-white mt-1">
@@ -104,6 +116,15 @@ export default function Nav() {
         <p className="font-medium tracking-widest text-2xl text-white">
           KasperPass
         </p>
+      </div>
+
+      <div className="relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full">
+        <Image
+          src={image}
+          width={500}
+          height={500}
+          alt="Picture of the author"
+        />
       </div>
     </div>
   );

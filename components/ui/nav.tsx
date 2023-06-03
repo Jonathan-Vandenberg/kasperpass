@@ -31,11 +31,9 @@ export default function Nav() {
           <LeftHamburger />
         </DropdownMenuTrigger>
         <DropdownMenuContent className="ml-5 py-4 px-2 mt-3">
-          <DropdownMenuLabel className="">
-            Triana Sofía González
-          </DropdownMenuLabel>
-          <div className="space-y-2 text-slate-700">
-            <DropdownMenuSeparator className="bg-gray-300" />
+          <DropdownMenuLabel>Triana Sofía González</DropdownMenuLabel>
+          <DropdownMenuSeparator className="bg-gray-300" />
+          <div className="space-y-5 text-slate-700 flex flex-col">
             <Link href="/identification">
               <DropdownMenuItem>
                 <div className="space-x-2 flex">

@@ -1,6 +1,5 @@
 "use client";
 
-import { Avatar, AvatarFallback, AvatarImage } from "@radix-ui/react-avatar";
 import LeftHamburger from "../svg/left-hamburger";
 import Shield from "../svg/shield";
 import Boxes from "../svg/boxes";
@@ -14,6 +13,13 @@ import {
 } from "@/components/ui/dropdown-menu";
 import image from "public/latina.png";
 import Image from "next/image";
+import Identification from "../svg/identification";
+import Residence from "../svg/residence";
+import Passport from "../svg/passport";
+import Bank from "../svg/bank";
+import Education from "../svg/education";
+import Career from "../svg/career";
+import Transactions from "../svg/transactions";
 
 export default function Nav() {
   return (
@@ -29,13 +35,48 @@ export default function Nav() {
             </DropdownMenuLabel>
             <div className="space-y-2">
               <DropdownMenuSeparator />
-              <DropdownMenuItem>Identification</DropdownMenuItem>
-              <DropdownMenuItem>Residence</DropdownMenuItem>
-              <DropdownMenuItem>Passport</DropdownMenuItem>
-              <DropdownMenuItem>Banking</DropdownMenuItem>
-              <DropdownMenuItem>Education</DropdownMenuItem>
-              <DropdownMenuItem>Career</DropdownMenuItem>
-              <DropdownMenuItem>Transactions</DropdownMenuItem>
+              <DropdownMenuItem>
+                <div className="space-x-2 flex">
+                  <Identification />
+                  <p>Identification</p>
+                </div>
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <div className="space-x-2 flex">
+                  <Residence />
+                  <p>Residence</p>
+                </div>
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <div className="space-x-2 flex">
+                  <Passport />
+                  <p>Passport</p>
+                </div>
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <div className="space-x-2 flex">
+                  <Bank />
+                  <p>Banking</p>
+                </div>
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <div className="space-x-2 flex">
+                  <Education />
+                  <p>Education</p>
+                </div>
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <div className="space-x-2 flex">
+                  <Career />
+                  <p>Career</p>
+                </div>
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <div className="space-x-2 flex">
+                  <Transactions />
+                  <p>Transactions</p>
+                </div>
+              </DropdownMenuItem>
             </div>
           </DropdownMenuContent>
         </DropdownMenu>

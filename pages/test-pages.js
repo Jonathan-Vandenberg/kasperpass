@@ -6,10 +6,7 @@ export default function TestPages() {
     <>
       <Head>
         <title>KasperPass</title>
-        <meta
-          name="description"
-          content="Next PWA example using next-pwa and app directory"
-        />
+        <meta name="description" content="Your Decentralised Connection" />
       </Head>
       <Home title="Pages" />
     </>

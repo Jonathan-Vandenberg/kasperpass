@@ -37,7 +37,7 @@ export default function Nav() {
         <DropdownMenuContent className="ml-5 py-4 px-2 mt-3 w-64">
           <DropdownMenuLabel>Triana Sofía González</DropdownMenuLabel>
           <DropdownMenuSeparator className="bg-gray-200" />
-          <div className="space-y-5 text-slate-700 flex flex-col">
+          <div className="space-y-5 text-slate-500 flex flex-col">
             <Link href="/identification">
               <DropdownMenuItem>
                 <div className="space-x-2 flex">
@@ -123,8 +123,8 @@ export default function Nav() {
         </DropdownMenuContent>
       </DropdownMenu>
 
-      <p className="font-medium tracking-widest text-2xl text-transparent bg-clip-text bg-gradient-to-r from-navGradient-start to-navGradient-end">
-        KasperPass
+      <p className="tracking-widest text-3xl text-transparent bg-clip-text bg-gradient-to-r from-navGradient-start to-navGradient-end">
+        <strong>KasperPass</strong>
       </p>
 
       {/* <div className="flex items-center space-x-1">

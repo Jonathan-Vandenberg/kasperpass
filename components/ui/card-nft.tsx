@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import React, { ReactElement } from "react";
 
-export default function Card({
+export default function CardNft({
   children,
   className,
 }: {
@@ -11,7 +11,7 @@ export default function Card({
   return (
     <div
       className={classNames(
-        "p-5 mx-auto flex justify-center items-center w-full bg-white drop-shadow-sm rounded-md",
+        "p-2 mx-auto flex justify-center items-center w-full bg-white drop-shadow-sm rounded-md",
         className
       )}
     >

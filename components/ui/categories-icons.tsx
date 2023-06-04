@@ -1,4 +1,4 @@
-import React, { ReactElement, ReactNode } from "react";
+import React, { ReactNode } from "react";
 import Settings from "../svg/settings";
 import Career from "../svg/career";
 import Education from "../svg/education";

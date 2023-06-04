@@ -1,6 +1,7 @@
 import Ai from "@/components/ui/ai";
 import CategoriesIcons from "@/components/ui/categories-icons";
 import Container from "@/components/ui/container";
+import NftScroller from "@/components/ui/nft-scroller";
 import SectionLabel from "@/components/ui/section-label";
 
 export default function Page() {
@@ -10,7 +11,8 @@ export default function Page() {
         <>
           <SectionLabel title="Categories" />
           <CategoriesIcons />
-          <SectionLabel title="Notifications" />
+          <SectionLabel title="Purchased" />
+          <NftScroller />
         </>
       </Container>
     </main>

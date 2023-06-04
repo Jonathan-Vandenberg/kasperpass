@@ -1,3 +1,4 @@
+import Ai from "@/components/ui/ai";
 import CategoriesIcons from "@/components/ui/categories-icons";
 import Container from "@/components/ui/container";
 import Notifications from "@/components/ui/notifications";
@@ -11,7 +12,7 @@ export default function Page() {
           <SectionLabel title="Categories" />
           <CategoriesIcons />
           <SectionLabel title="Notifications" />
-          <Notifications />
+          <Ai />
         </>
       </Container>
     </main>

@@ -23,6 +23,9 @@ import Career from "../svg/career";
 import Transactions from "../svg/transactions";
 import Settings from "../svg/settings";
 import Wallet from "../svg/wallet";
+import Help from "../svg/help";
+
+// SVGs from Lucide
 
 export default function Nav() {
   return (
@@ -31,9 +34,9 @@ export default function Nav() {
         <DropdownMenuTrigger>
           <LeftHamburger />
         </DropdownMenuTrigger>
-        <DropdownMenuContent className="ml-5 py-4 px-2 mt-3">
+        <DropdownMenuContent className="ml-5 py-4 px-2 mt-3 w-64">
           <DropdownMenuLabel>Triana Sofía González</DropdownMenuLabel>
-          <DropdownMenuSeparator className="bg-gray-300" />
+          <DropdownMenuSeparator className="bg-gray-200" />
           <div className="space-y-5 text-slate-700 flex flex-col">
             <Link href="/identification">
               <DropdownMenuItem>
@@ -99,11 +102,20 @@ export default function Nav() {
                 </div>
               </DropdownMenuItem>
             </Link>
+            <DropdownMenuSeparator className="bg-gray-200" />
             <Link href="/settings">
               <DropdownMenuItem>
                 <div className="space-x-2 flex">
                   <Settings />
                   <p>Settings</p>
+                </div>
+              </DropdownMenuItem>
+            </Link>
+            <Link href="/help">
+              <DropdownMenuItem>
+                <div className="space-x-2 flex">
+                  <Help />
+                  <p>Help</p>
                 </div>
               </DropdownMenuItem>
             </Link>

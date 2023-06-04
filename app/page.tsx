@@ -13,6 +13,7 @@ export default function Page() {
           <CategoriesIcons />
           <SectionLabel title="Purchased" />
           <NftScroller />
+          <SectionLabel title="News" />
         </>
       </Container>
     </main>

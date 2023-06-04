@@ -1,7 +1,6 @@
 import Ai from "@/components/ui/ai";
 import CategoriesIcons from "@/components/ui/categories-icons";
 import Container from "@/components/ui/container";
-import Notifications from "@/components/ui/notifications";
 import SectionLabel from "@/components/ui/section-label";
 
 export default function Page() {

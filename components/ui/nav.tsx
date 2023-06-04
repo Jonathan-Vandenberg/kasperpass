@@ -25,7 +25,7 @@ import Settings from "../svg/settings";
 
 export default function Nav() {
   return (
-    <div className="h-[130px] w-full bg-gradient-to-r from-navGradient-start to-navGradient-end px-3 flex items-center justify-between">
+    <div className="h-[130px] w-full bg-gradient-to-r from-navGradient-start to-navGradient-end flex items-center justify-between px-5">
       <DropdownMenu>
         <DropdownMenuTrigger>
           <LeftHamburger />

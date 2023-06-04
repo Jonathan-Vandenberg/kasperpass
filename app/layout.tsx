@@ -1,13 +1,16 @@
 import Nav from "@/components/ui/nav";
 import "@/styles/globals.css";
 import { Inter } from "next/font/google";
-import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   manifest: "/manifest.json",
   themeColor: "#ffffff",
+  title: "KasperPass",
+  visualViewport: "width=device-width; initial-scale=1; viewport-fit=cover",
+  mobileWebCapable: "yes",
+  appleMobileWebCapable: "yes",
 };
 
 export default function RootLayout({

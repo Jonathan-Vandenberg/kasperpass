@@ -6,15 +6,14 @@ import SectionLabel from "@/components/ui/section-label";
 
 export default function Page() {
   return (
-    <main title="App" className="max-h-screen">
+    <main title="App" className="">
       <Container>
-        <>
-          <SectionLabel title="Categories" />
+        <div className="">
           <CategoriesIcons />
           <SectionLabel title="Purchased" />
           <NftScroller />
           <SectionLabel title="News" />
-        </>
+        </div>
       </Container>
     </main>
   );

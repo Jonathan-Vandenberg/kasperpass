@@ -29,7 +29,7 @@ import Help from "../svg/help";
 
 export default function Nav() {
   return (
-    <div className="h-[130px] w-full bg-gradient-to-r from-navGradient-start to-navGradient-end flex items-center justify-between px-5">
+    <div className="h-[80px] w-full flex items-center justify-between px-5">
       <DropdownMenu>
         <DropdownMenuTrigger>
           <LeftHamburger />
@@ -123,19 +123,20 @@ export default function Nav() {
         </DropdownMenuContent>
       </DropdownMenu>
 
-      <div className="flex items-center space-x-1">
+      <p className="font-medium tracking-widest text-2xl text-transparent bg-clip-text bg-gradient-to-r from-navGradient-start to-navGradient-end">
+        KasperPass
+      </p>
+
+      {/* <div className="flex items-center space-x-1">
         <div className="relative">
-          <div className="text-white mt-1">
+          <div className="text-black">
             <Shield />
           </div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white">
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-black pb-1">
             <Boxes />
           </div>
         </div>
-        <p className="font-medium tracking-widest text-2xl text-white">
-          KasperPass
-        </p>
-      </div>
+      </div> */}
 
       <div className="relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full">
         <Image

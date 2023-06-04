@@ -11,7 +11,6 @@ export default function Page() {
           <SectionLabel title="Categories" />
           <CategoriesIcons />
           <SectionLabel title="Notifications" />
-          <Ai />
         </>
       </Container>
     </main>

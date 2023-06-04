@@ -7,7 +7,7 @@ export default function ClientSection() {
   const [input, setInput] = useState("");
   const [response, setResponse] = useState<String>("");
 
-  const prompt = `Q: ${input} Generate a response with less than 200 characters.`;
+  const prompt = `Q:${input} Generate a response with less than 200 characters.`;
 
   const generateResponse = async (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
@@ -56,14 +56,14 @@ export default function ClientSection() {
         maxLength={200}
         className="focus:ring-neu w-full rounded-md border border-neutral-400
          p-4 text-neutral-900 shadow-sm placeholder:text-neutral-400 focus:border-neutral-900"
-        placeholder={"e.g. What is React?"}
+        placeholder={"e.g. What is permanent residency?"}
       />
       {!loading ? (
         <button
           className="w-full rounded-xl bg-neutral-900 px-4 py-2 font-medium text-white hover:bg-black/80"
           onClick={(e) => generateResponse(e)}
         >
-          Generate Response &rarr;
+          Ask AI &rarr;
         </button>
       ) : (
         <button

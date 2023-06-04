@@ -1,6 +1,5 @@
 import React from "react";
 import Image, { StaticImageData } from "next/image";
-import Card from "./card";
 import CardNft from "./card-nft";
 
 export default function NftCard({
@@ -24,7 +23,7 @@ export default function NftCard({
         <div className="relative flex h-48 w-48 shrink-0 overflow-hidden aspect-square rounded-md">
           <Image src={nft} width={400} height={400} alt="My Nft" />
         </div>
-        <div className="flex items-start justify-between pt-4">
+        <div className="flex items-center justify-between pt-4">
           <div className="grid grid-cols-1">
             <div className="text-sm leading-relaxed tracking-widest text-slate-600">
               {name}

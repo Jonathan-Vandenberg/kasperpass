@@ -40,7 +40,7 @@ const myNfts = [
 
 export default function NftScroller() {
   return (
-    <div className="overflow-x-auto flex space-x-3 no-scrollbar">
+    <div className="overflow-x-auto flex space-x-3 no-scrollbar pl-16">
       <>
         {myNfts.map((myNft, index) => (
           <NftCard

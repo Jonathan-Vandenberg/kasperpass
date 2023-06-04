@@ -1,13 +1,19 @@
-import Home from "@/components/ui/home";
+import CategoriesIcons from "@/components/ui/categories-icons";
+import Container from "@/components/ui/container";
+import Notifications from "@/components/ui/notifications";
 import SectionLabel from "@/components/ui/section-label";
 
 export default function Page() {
   return (
     <main title="App" className="max-h-screen">
-      <SectionLabel title="Categories" />
-      <div className="px-3">
-        <Home />
-      </div>
+      <Container>
+        <>
+          <SectionLabel title="Categories" />
+          <CategoriesIcons />
+          <SectionLabel title="Notifications" />
+          <Notifications />
+        </>
+      </Container>
     </main>
   );
 }

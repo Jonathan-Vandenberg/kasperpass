@@ -22,6 +22,7 @@ import Education from "../svg/education";
 import Career from "../svg/career";
 import Transactions from "../svg/transactions";
 import Settings from "../svg/settings";
+import Wallet from "../svg/wallet";
 
 export default function Nav() {
   return (
@@ -82,11 +83,19 @@ export default function Nav() {
                 </div>
               </DropdownMenuItem>
             </Link>
-            <Link href="transactions">
+            <Link href="/transactions">
               <DropdownMenuItem>
                 <div className="space-x-2 flex">
                   <Transactions />
                   <p>Transactions</p>
+                </div>
+              </DropdownMenuItem>
+            </Link>
+            <Link href="/wallet">
+              <DropdownMenuItem>
+                <div className="space-x-2 flex">
+                  <Wallet />
+                  <p>Wallet</p>
                 </div>
               </DropdownMenuItem>
             </Link>

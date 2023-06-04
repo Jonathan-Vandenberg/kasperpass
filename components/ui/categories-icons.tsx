@@ -18,11 +18,11 @@ export function Icon({
 }: {
   title: string;
   children: ReactNode;
-  href?: string;
+  href: string;
 }) {
   return (
     <div className="flex flex-col items-center space-y-1">
-      <Link href="/identification">
+      <Link href={href}>
         <div className="flex justify-center text-sky-500 bg-cyan-100 rounded-full aspect-square items-center p-3">
           {children}
         </div>

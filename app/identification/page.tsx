@@ -14,6 +14,8 @@ export default function Page() {
         const file = target.files[0];
         const newUrl = URL.createObjectURL(file);
         setSource(newUrl);
+        console.log("url: " + newUrl);
+        console.log("sourceUrl: " + source);
       }
     }
   };
@@ -29,22 +31,20 @@ export default function Page() {
           <div>
             <h5>Capture your image</h5>
             {source && (
-              <div className="flex justify-center w-36 h-36">
-                <img src={source} alt={"snap"} className="h-36 w-36"></img>
+              <div className="flex justify-center w-36 h-36 bg-gray-400">
+                <img src={source} alt={"snap"} className="h-36 w-36" />
               </div>
             )}
             <input
               accept="image/*"
-              className="hidden"
+              className=""
               id="icon-button-file"
               type="file"
               capture="environment"
               onChange={(e) => handleCapture(e.target)}
             />
             <label htmlFor="icon-button-file">
-              <button color="primary" aria-label="upload picture">
-                Camera Icon here
-              </button>
+              <button aria-label="upload picture">Camera Icon here</button>
             </label>
           </div>
         </div>

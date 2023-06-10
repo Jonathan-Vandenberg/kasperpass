@@ -29,12 +29,8 @@ export default function Page() {
           <div>
             <h5>Capture your image</h5>
             {source && (
-              <div className="flex justify-center max-w-[80%] max-h-[80%] m-4">
-                <img
-                  src={source}
-                  alt={"snap"}
-                  className="h-[80%] w-[80%]"
-                ></img>
+              <div className="flex justify-center w-36 h-36">
+                <img src={source} alt={"snap"} className="h-36 w-36"></img>
               </div>
             )}
             <input

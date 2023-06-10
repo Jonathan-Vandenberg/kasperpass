@@ -27,7 +27,7 @@ export function Icon({
           {children}
         </div>
       </Link>
-      <p className="text-xs text-slate-500 leading-relaxed tracking-widest">
+      <p className="text-xs text-slate-500 leading-normal tracking-widest text-center">
         {title}
       </p>
     </div>
@@ -38,28 +38,28 @@ export default function CategoriesIcons() {
   return (
     <Card>
       <div className="grid grid-cols-4 gap-5 w-full text-slate-700 bg-white">
-        <Icon title="Identification" href="/identification">
+        <Icon title="ID" href="/identification">
           <Identification width={28} height={28} stroke={1.3} />
         </Icon>
-        <Icon title="Banking" href="/banking">
+        <Icon title="Passport" href="/banking">
           <Banking width={28} height={28} stroke={1.3} />
         </Icon>
-        <Icon title="Residence" href="/residence">
+        <Icon title="Driving License" href="/residence">
           <Residence width={28} height={28} stroke={1.3} />
         </Icon>
-        <Icon title="Passport" href="/passport">
+        <Icon title="Visa" href="/passport">
           <Passport width={28} height={28} stroke={1.3} />
         </Icon>
-        <Icon title="Education" href="/education">
+        <Icon title="CC" href="/education">
           <Education width={28} height={28} stroke={1.3} />
         </Icon>
-        <Icon title="Career" href="/career">
+        <Icon title="Birth Certificate" href="/career">
           <Career width={28} height={28} stroke={1.3} />
         </Icon>
-        <Icon title="Transactions" href="/transactions">
+        <Icon title="Councel Registration" href="/transactions">
           <Transactions width={28} height={28} stroke={1.3} />
         </Icon>
-        <Icon title="Wallet" href="/wallet">
+        <Icon title="Something" href="/wallet">
           <Wallet width={28} height={28} stroke={1.3} />
         </Icon>
       </div>

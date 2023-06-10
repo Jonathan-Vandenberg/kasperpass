@@ -42,7 +42,7 @@ export default function Nav() {
               <DropdownMenuItem>
                 <div className="space-x-2 flex">
                   <Identification />
-                  <p>Identification</p>
+                  <p>ID</p>
                 </div>
               </DropdownMenuItem>
             </Link>
@@ -50,7 +50,7 @@ export default function Nav() {
               <DropdownMenuItem>
                 <div className="space-x-2 flex">
                   <Residence />
-                  <p>Residence</p>
+                  <p>Passport</p>
                 </div>
               </DropdownMenuItem>
             </Link>
@@ -66,7 +66,7 @@ export default function Nav() {
               <DropdownMenuItem>
                 <div className="space-x-2 flex">
                   <Bank />
-                  <p>Banking</p>
+                  <p>Driving License</p>
                 </div>
               </DropdownMenuItem>
             </Link>
@@ -74,7 +74,7 @@ export default function Nav() {
               <DropdownMenuItem>
                 <div className="space-x-2 flex">
                   <Education />
-                  <p>Education</p>
+                  <p>Visa</p>
                 </div>
               </DropdownMenuItem>
             </Link>
@@ -82,7 +82,7 @@ export default function Nav() {
               <DropdownMenuItem>
                 <div className="space-x-2 flex">
                   <Career />
-                  <p>Career</p>
+                  <p>CC</p>
                 </div>
               </DropdownMenuItem>
             </Link>
@@ -90,7 +90,7 @@ export default function Nav() {
               <DropdownMenuItem>
                 <div className="space-x-2 flex">
                   <Transactions />
-                  <p>Transactions</p>
+                  <p>Birth Cert.</p>
                 </div>
               </DropdownMenuItem>
             </Link>
@@ -98,7 +98,7 @@ export default function Nav() {
               <DropdownMenuItem>
                 <div className="space-x-2 flex">
                   <Wallet />
-                  <p>Wallet</p>
+                  <p>Council Reg.</p>
                 </div>
               </DropdownMenuItem>
             </Link>

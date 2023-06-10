@@ -1,15 +1,58 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
-export default function page() {
+export default function Page() {
+  const [source, setSource] = useState("");
+
+  const handleCapture = (target: EventTarget & HTMLInputElement) => {
+    if (target.files) {
+      if (target.files.length !== 0) {
+        const file = target.files[0];
+        const newUrl = URL.createObjectURL(file);
+        setSource(newUrl);
+      }
+    }
+  };
+
   return (
     <div className="">
       <h2>Identification Page</h2>
       <Button>
         <Link href="/">Home</Link>
       </Button>
+      <div className="h-full text-center">
+        <div>
+          <div>
+            <h5>Capture your image</h5>
+            {source && (
+              <div className="flex justify-center max-w-[80%] max-h-[80%] m-4">
+                <img
+                  src={source}
+                  alt={"snap"}
+                  className="h-[80%] w-[80%]"
+                ></img>
+              </div>
+            )}
+            <input
+              accept="image/*"
+              className="hidden"
+              id="icon-button-file"
+              type="file"
+              capture="environment"
+              onChange={(e) => handleCapture(e.target)}
+            />
+            <label htmlFor="icon-button-file">
+              <button color="primary" aria-label="upload picture">
+                Camera Icon here
+              </button>
+            </label>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

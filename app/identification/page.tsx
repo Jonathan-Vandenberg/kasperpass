@@ -1,16 +1,38 @@
 "use client";
 
-import React, { useState } from "react";
-
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import Camera from "@/components/ui/camera";
+import QrScanner from "@/components/ui/QrScanner";
 import Container from "@/components/ui/container";
+import MediaDevices from "@/components/ui/MediaDevices";
+
+import { useState } from "react";
 
 export default function Page() {
+  const [result, setResult] = useState("");
+  const [decode, setDecode] = useState("");
   return (
-    <Container>
-      <Camera />
-    </Container>
+    <div className="h-full w-full">
+      <QrScanner
+        onResult={(result) => {
+          const data = JSON.stringify(result);
+          setResult(data);
+          console.log("onResult" + result);
+        }}
+        onDecode={(decode) => {
+          const data = JSON.stringify(result);
+          setDecode(data);
+          console.log("onDecode" + decode);
+        }}
+        onError={(error) => {
+          console.log("onError" + error?.message);
+        }}
+      />
+      <Container className="max-w-screen">
+        <>
+          <MediaDevices />
+          <p>{result}</p>
+          <p>{decode}</p>
+        </>
+      </Container>
+    </div>
   );
 }

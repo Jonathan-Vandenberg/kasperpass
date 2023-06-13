@@ -1,42 +1,61 @@
 // Capture and send image from front-facing mobile camera
-const captureAndSendImage = async () => {
+export const captureAndSendImage = async () => {
   try {
     const stream = await navigator.mediaDevices.getUserMedia({
       video: { facingMode: "user" },
       audio: false,
     });
-    const videoTrack = stream.getVideoTracks()[0];
-    const imageCapture = new ImageCapture(videoTrack);
-    const photo = await imageCapture.takePhoto();
-    const reader = new FileReader();
-    reader.onload = function () {
-      const imageData = reader.result;
 
-      // Create a data object to send in the request body
-      const data = {
-        useCamera: true,
-        imageData: imageData,
-      };
+    // Create a video element to display the video stream
+    const video = document.createElement("video");
+    video.srcObject = stream;
+    video.autoplay = true;
 
-      // Send the captured image data to the API route
-      fetch("/api/matting", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      })
-        .then((response) => response.json())
-        .then((data) => {
-          // Process the response data
-          console.log(data);
-        })
-        .catch((error) => {
-          // Handle any errors
-          console.error(error);
-        });
+    // Wait for the video to be loaded and ready
+    await new Promise((resolve) => {
+      video.addEventListener("loadedmetadata", resolve);
+    });
+
+    // Create a canvas element to draw the video frame
+    const canvas = document.createElement("canvas");
+    canvas.width = video.videoWidth;
+    canvas.height = video.videoHeight;
+
+    // Draw the video frame onto the canvas
+    const context = canvas.getContext("2d");
+    context?.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+    // Get the image data from the canvas
+    const imageData = canvas.toDataURL("image/jpeg");
+
+    // Create a data object to send in the request body
+    const data = {
+      useCamera: true,
+      imageData: imageData,
     };
-    reader.readAsDataURL(photo);
+
+    // Send the captured image data to the API route
+    fetch("/api/matting", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        // Process the response data
+        console.log(data);
+      })
+      .catch((error) => {
+        // Handle any errors
+        console.error(error);
+      });
+
+    // Clean up the resources
+    stream.getVideoTracks().forEach((track) => track.stop());
+    video.remove();
+    canvas.remove();
   } catch (error) {
     // Handle any errors related to accessing the camera
     console.error(error);

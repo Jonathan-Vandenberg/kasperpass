@@ -11,6 +11,9 @@ import GenerateQRCode from "../utilities/generateQRCode";
 export default function Page() {
   const [data, setData] = useState<Result>();
   const [decode, setDecode] = useState("");
+
+  const userInfo = JSON.parse(decode);
+
   return (
     <div className="h-full w-full">
       <QrScanner
@@ -27,8 +30,10 @@ export default function Page() {
       <Container className="max-w-screen">
         <>
           <MediaDevices />
-          <p>{JSON.stringify(data)}</p>
           <p>{decode}</p>
+          <p>{userInfo.name}</p>
+          <p>{userInfo.age}</p>
+          <p>{userInfo.id}</p>
         </>
       </Container>
       <GenerateQRCode />

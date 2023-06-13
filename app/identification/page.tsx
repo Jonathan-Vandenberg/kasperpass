@@ -10,9 +10,7 @@ import GenerateQRCode from "../utilities/generateQRCode";
 
 export default function Page() {
   const [data, setData] = useState<Result>();
-  const [decode, setDecode] = useState("");
-
-  const userInfo = JSON.parse(decode);
+  const [decode, setDecode] = useState({ name: "", age: "", id: "" });
 
   return (
     <div className="h-full w-full">
@@ -21,7 +19,8 @@ export default function Page() {
           setData(result);
         }}
         onDecode={(decode) => {
-          setDecode(decode);
+          const userInfo = JSON.parse(decode);
+          setDecode(userInfo);
         }}
         onError={(error) => {
           console.log("onError" + error?.message);
@@ -30,10 +29,9 @@ export default function Page() {
       <Container className="max-w-screen">
         <>
           <MediaDevices />
-          <p>{decode}</p>
-          <p>{userInfo.name}</p>
-          <p>{userInfo.age}</p>
-          <p>{userInfo.id}</p>
+          <p>{decode.name}</p>
+          <p>{decode.age}</p>
+          <p>{decode.id}</p>
         </>
       </Container>
       <GenerateQRCode />

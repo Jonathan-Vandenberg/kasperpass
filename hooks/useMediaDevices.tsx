@@ -5,6 +5,8 @@ import off from "../app/utilities/off";
 
 import { defaultConstraints } from "../misc/default-constraints";
 
+//
+
 const useMediaDevicesHook = (constraints?: MediaTrackConstraints) => {
   const [state, setState] = useState<MediaTrackSettings[]>([]);
 

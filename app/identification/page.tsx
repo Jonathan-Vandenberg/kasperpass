@@ -5,6 +5,7 @@ import Container from "@/components/ui/container";
 import MediaDevices from "@/components/ui/MediaDevices";
 
 import { useState } from "react";
+import GenerateQRCode from "../utilities/generateQRCode";
 
 export default function Page() {
   const [result, setResult] = useState("");
@@ -33,6 +34,7 @@ export default function Page() {
           <p>{decode}</p>
         </>
       </Container>
+      <GenerateQRCode />
     </div>
   );
 }

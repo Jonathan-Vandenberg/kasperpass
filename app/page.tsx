@@ -29,6 +29,10 @@ export default function Page() {
               <p className="font-serif text-slate-500 text-sm text-center w-full">
                 0xa0b668fbeC004c410987687B53Bd6Bb7809E4Bb4
               </p>
+              {/* <img
+                src="https://hatscripts.github.io/circle-flags/flags/sp.svg"
+                width="100"
+              ></img> */}
             </div>
           </div>
           <div className="pt-8">

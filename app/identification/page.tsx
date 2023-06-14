@@ -43,7 +43,7 @@ export default function Page() {
         }}
       />
       <>
-        <Link href="/personal-id">Go to Personal ID</Link>
+        <Link href="/identification/personal-id">Go to Personal ID</Link>
         <button onClick={navigateToPersonalId}>
           Go to Personal ID (via function)
         </button>

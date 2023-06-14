@@ -64,7 +64,7 @@ export default function Page() {
           <p>Father: {decode.father}</p>
         </>
       </Container>
-      {/* <GenerateQRCode /> */}
+      <GenerateQRCode />
     </div>
   );
 }

@@ -2,9 +2,28 @@ import React from "react";
 import QRCode from "react-qr-code";
 
 export default function GenerateQRCode() {
-  const d = new Date();
-  let date = d.toString();
-  var futureDate = d.getMonth() + 4;
+  // Fetching the current date
+  const currentDate = new Date();
+
+  // Calculating a date 3 months after the current date
+  const futureDate = new Date();
+  futureDate.setMonth(currentDate.getMonth() + 3);
+
+  // Formatting the dates (optional)
+  const options: Intl.DateTimeFormatOptions = {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  };
+  const formattedCurrentDate = currentDate.toLocaleDateString(
+    undefined,
+    options
+  );
+  const formattedFutureDate = futureDate.toLocaleDateString(undefined, options);
+
+  // Outputting the results
+  console.log("Current Date:", formattedCurrentDate);
+  console.log("Date 3 Months Later:", formattedFutureDate);
 
   const userInfo = {
     name: "Jonathan Charles",
@@ -14,8 +33,8 @@ export default function GenerateQRCode() {
     address: "123 Happy Street",
     birthCertificate: "143123123",
     issuer: "Issued by the Spanish Government",
-    issueDate: date,
-    expirationDate: futureDate,
+    issueDate: formattedCurrentDate,
+    expirationDate: formattedFutureDate,
     nationality: "Spanish",
     mother: "Nicole Margaret van den Berg",
     father: "Charles Hendrik van den Berg",

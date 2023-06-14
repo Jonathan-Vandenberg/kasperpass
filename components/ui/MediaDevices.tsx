@@ -5,8 +5,7 @@ import { useMediaDevices } from "../../hooks/useMediaDevices";
 function Template() {
   const state = useMediaDevices();
 
-  // return <pre>{JSON.stringify(null, null, 2)}</pre>;
-  return;
+  return <pre>{JSON.stringify(state, null, 2)}</pre>;
 }
 
 export const ListDevices = Template.bind({});

@@ -83,7 +83,7 @@ export const Finder = (props: FinderProps) => {
           strokeWidth="5"
         />
         <path
-          fill=""
+          fill="none"
           d="M77,100 L100,100 L100,77"
           stroke={color}
           strokeWidth="5"

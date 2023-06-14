@@ -35,10 +35,11 @@ export const captureAndSendImage = async () => {
     };
 
     // Send the captured image data to the API route
-    fetch("/api/matting", {
+    fetch("https://www.cutout.pro/api/v1/matting?mattingType=6", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        APIKEY: "e1fb48b8a9a24ea9988a01b299ead5d6",
       },
       body: JSON.stringify(data),
     })

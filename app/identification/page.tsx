@@ -8,13 +8,14 @@ import Result from "@zxing/library/esm/core/Result";
 import { useState } from "react";
 import GenerateQRCode from "../utilities/generateQRCode";
 import CameraComponent from "@/components/ui/profile-selfie";
+import { captureAndSendImage } from "api/profile-image";
 
 export default function Page() {
   const [data, setData] = useState<Result>();
-  const [decode, setDecode] = useState({ name: "", age: "", id: "" });
+  const [decode, setDecode] = useState({ name: "", age: "", ID: "" });
 
   const handleCapture = (imageData: any) => {
-    // Handle the captured image data here
+    captureAndSendImage();
     console.log(imageData);
   };
 
@@ -33,13 +34,13 @@ export default function Page() {
         }}
       />
       <Container className="max-w-screen">
-        <CameraComponent onCapture={handleCapture} />
-        {/* <>
+        {/* <CameraComponent onCapture={handleCapture} /> */}
+        <>
           <MediaDevices />
           <p>{decode.name}</p>
           <p>{decode.age}</p>
-          <p>{decode.id}</p>
-        </> */}
+          <p>{decode.ID}</p>
+        </>
       </Container>
       {/* <GenerateQRCode /> */}
     </div>

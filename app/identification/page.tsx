@@ -49,7 +49,7 @@ export default function Page() {
       <Container className="max-w-screen">
         {/* <CameraComponent onCapture={handleCapture} /> */}
         <>
-          <MediaDevices />
+          {/* <MediaDevices /> */}
           <p>Name: {decode.name}</p>
           <p>Surname: {decode.surname}</p>
           <p>ID: {decode.ID}</p>

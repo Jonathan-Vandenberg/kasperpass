@@ -22,7 +22,7 @@ export const Finder = (props: FinderProps) => {
     scanCount,
     hideCount,
     tracker,
-    border = 80,
+    border = 70,
     result,
     video,
     constraints,
@@ -69,7 +69,7 @@ export const Finder = (props: FinderProps) => {
           left: 0,
           zIndex: 1,
           boxSizing: "border-box",
-          border: `${border}px solid rgba(0, 0, 0, 0.1)`,
+          border: `${border}px solid rgba(0, 0, 0, 0.2)`,
           position: "absolute",
           width: "100%",
           height: "100%",
@@ -83,7 +83,7 @@ export const Finder = (props: FinderProps) => {
           strokeWidth="5"
         />
         <path
-          fill="none"
+          fill=""
           d="M77,100 L100,100 L100,77"
           stroke={color}
           strokeWidth="5"

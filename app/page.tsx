@@ -8,7 +8,7 @@ export default function Page() {
     <main title="App" className="">
       <div className="h-full">
         <div className="relative w-full mx-auto pt-6">
-          <span className="absolute bg-purple-100 rounded-bl-full w-full h-[100px] -z-10 inset-0" />
+          <span className="absolute bg-cyan-100 rounded-bl-full w-full h-[100px] -z-10 inset-0" />
         </div>
         <div className="flex items-center justify-center h-36 w-36 shrink-0 overflow-hidden rounded-full mx-auto mt-4">
           <Image

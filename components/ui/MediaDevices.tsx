@@ -5,6 +5,7 @@ import { useMediaDevices } from "../../hooks/useMediaDevices";
 function Template() {
   const state = useMediaDevices();
 
+  // User device info
   return <pre>{JSON.stringify(state, null, 2)}</pre>;
 }
 

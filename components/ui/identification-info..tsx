@@ -7,22 +7,9 @@ import Image from "next/image";
 export default function IdentificationInfo({ information }: any) {
   return (
     <Container>
-      <div className="flex flex-col items-center justify-center">
+      <div className="flex flex-col items-center justify-center space-y-10">
         {information.name && (
-          <div className="w-full">
-            <div className="relative flex items-center justify-center h-36 w-36 shrink-0 rounded-full mx-auto mt-4 overflow-visible">
-              <Image
-                src={image}
-                width={500}
-                height={500}
-                className="z-20 rounded-full"
-                alt="Picture of the author"
-              />
-            </div>
-          </div>
-        )}
-        <div className="flex flex-col items-start justify-start space-y-3 text-gray-600">
-          <div className="relative flex items-center justify-center h-36 w-36 shrink-0 rounded-full mx-auto mt-4 overflow-visible">
+          <div className="relative flex items-center justify-center h-36 w-36 shrink-0 rounded-full mx-auto mt-4 overflow-visible pt-6">
             <Image
               src={image}
               width={500}
@@ -31,6 +18,8 @@ export default function IdentificationInfo({ information }: any) {
               alt="Picture of the author"
             />
           </div>
+        )}
+        <div className="flex flex-col items-start justify-start space-y-3 text-gray-600 w-full pt-6">
           <div className="flex items-center justify-between border border-1-gray rounded-full px-4 py-3 w-full whitespace-nowrap">
             <p>Name</p>
             {information.name ? (

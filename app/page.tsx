@@ -1,4 +1,5 @@
 "use client";
+
 import CategoriesIcons from "@/components/ui/categories-icons";
 import Container from "@/components/ui/container";
 import Image from "next/image";
@@ -7,7 +8,6 @@ import { useChat } from "ai/react";
 
 export default function Page() {
   const { messages, input, handleInputChange, handleSubmit } = useChat();
-
   return (
     <main title="App" className="">
       <div className="h-full">
@@ -50,7 +50,7 @@ export default function Page() {
           </div>
         </div>
       </Container>
-      <Container>
+      {/* <Container>
         <div>
           {messages.map((m) => (
             <div key={m.id}>
@@ -66,7 +66,7 @@ export default function Page() {
             />
           </form>
         </div>
-      </Container>
+      </Container> */}
     </main>
   );
 }

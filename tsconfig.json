@@ -29,7 +29,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "app/identification/image.js"
+    "app/identification/image.js",
+    "api/chat/route.js"
   ],
   "exclude": ["node_modules"]
 }

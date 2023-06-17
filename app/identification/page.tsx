@@ -30,6 +30,7 @@ export default function Page() {
 
   const [data, setData] = useState<Result>();
   const [information, setInformation] = useState(initData);
+  const [hidden, setHidden] = useState(false);
 
   const handleCapture = (imageData: any) => {
     captureAndSendImage();
@@ -38,18 +39,21 @@ export default function Page() {
 
   return (
     <div className="h-full w-full">
-      <QrScanner
-        onResult={(result) => {
-          setData(result);
-        }}
-        onDecode={(decode) => {
-          const userInfo = JSON.parse(decode);
-          setInformation(userInfo);
-        }}
-        onError={(error) => {
-          console.log("onError" + error?.message);
-        }}
-      />
+      {!hidden && (
+        <QrScanner
+          onResult={(result) => {
+            setData(result);
+            setHidden(true);
+          }}
+          onDecode={(decode) => {
+            const userInfo = JSON.parse(decode);
+            setInformation(userInfo);
+          }}
+          onError={(error) => {
+            console.log("onError" + error?.message);
+          }}
+        />
+      )}
       <IdentificationInfo information={information} />
       {/* <GenerateQRCode /> */}
     </div>

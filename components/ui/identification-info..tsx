@@ -24,8 +24,8 @@ export default function IdentificationInfo({ information }: any) {
         </div>
         <div className="flex items-center justify-between py-2 px-4 text-sm whitespace-nowrap space-x-2 w-full border rounded-full border-2-slate ">
           <p>ID</p>
-          {information.id ? (
-            <p>{information.id}</p>
+          {information.ID ? (
+            <p>{information.ID}</p>
           ) : (
             <Skeleton className="flex items-center justify-between py-2 px-4 text-sm whitespace-nowrap space-x-2 w-full border rounded-full border-2-slate " />
           )}

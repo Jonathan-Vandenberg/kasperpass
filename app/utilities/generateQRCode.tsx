@@ -28,7 +28,7 @@ export default function GenerateQRCode() {
   const userInfo = {
     name: "Jonathan Charles",
     surname: "van den Berg",
-    ID: "839103741291",
+    id: "839103741291",
     support: "0839283733",
     address: "123 Happy Street",
     birthCertificate: "143123123",

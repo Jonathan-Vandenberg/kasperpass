@@ -17,7 +17,7 @@ export default function Page() {
   const initData = {
     name: "",
     surname: "",
-    ID: "",
+    id: "",
     support: "",
     address: "",
     birthCertificate: "",

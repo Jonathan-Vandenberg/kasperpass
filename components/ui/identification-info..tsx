@@ -11,7 +11,7 @@ export default function IdentificationInfo({ information }: any) {
           {information.name ? (
             <p>{information.name}</p>
           ) : (
-            <Skeleton className="w-[70%] px-3 h-[20px] rounded-full bg-gray-200" />
+            <Skeleton className="flex items-center justify-between py-2 px-4 text-sm whitespace-nowrap space-x-2 w-full border rounded-full border-2-slate " />
           )}
         </div>
         <div className="flex items-center justify-between py-2 px-4 text-sm whitespace-nowrap space-x-2 w-full border rounded-full border-2-slate ">
@@ -19,7 +19,7 @@ export default function IdentificationInfo({ information }: any) {
           {information.surname ? (
             <p>{information.surname}</p>
           ) : (
-            <Skeleton className="w-[70%] px-3 h-[20px] rounded-full bg-gray-200" />
+            <Skeleton className="flex items-center justify-between py-2 px-4 text-sm whitespace-nowrap space-x-2 w-full border rounded-full border-2-slate " />
           )}
         </div>
         <div className="flex items-center justify-between py-2 px-4 text-sm whitespace-nowrap space-x-2 w-full border rounded-full border-2-slate ">
@@ -27,7 +27,7 @@ export default function IdentificationInfo({ information }: any) {
           {information.id ? (
             <p>{information.id}</p>
           ) : (
-            <Skeleton className="w-[70%] px-3 h-[20px] rounded-full bg-gray-200" />
+            <Skeleton className="flex items-center justify-between py-2 px-4 text-sm whitespace-nowrap space-x-2 w-full border rounded-full border-2-slate " />
           )}
         </div>
         <div className="flex items-center justify-between py-2 px-4 text-sm whitespace-nowrap space-x-2 w-full border rounded-full border-2-slate ">
@@ -35,7 +35,7 @@ export default function IdentificationInfo({ information }: any) {
           {information.support ? (
             <p>{information.support}</p>
           ) : (
-            <Skeleton className="w-[70%] px-3 h-[20px] rounded-full bg-gray-200" />
+            <Skeleton className="flex items-center justify-between py-2 px-4 text-sm whitespace-nowrap space-x-2 w-full border rounded-full border-2-slate " />
           )}
         </div>
         <div className="flex items-center justify-between py-2 px-4 text-sm whitespace-nowrap space-x-2 w-full border rounded-full border-2-slate ">
@@ -43,15 +43,15 @@ export default function IdentificationInfo({ information }: any) {
           {information.address ? (
             <p>{information.address}</p>
           ) : (
-            <Skeleton className="w-[70%] px-3 h-[20px] rounded-full bg-gray-200" />
+            <Skeleton className="flex items-center justify-between py-2 px-4 text-sm whitespace-nowrap space-x-2 w-full border rounded-full border-2-slate " />
           )}
         </div>
         <div className="flex items-center justify-between py-2 px-4 text-sm whitespace-nowrap space-x-2 w-full border rounded-full border-2-slate ">
           <p>Birth Date</p>
-          {information.birth ? (
+          {information.birthCertificate ? (
             <p>{information.birth}</p>
           ) : (
-            <Skeleton className="w-[70%] px-3 h-[20px] rounded-full bg-gray-200" />
+            <Skeleton className="flex items-center justify-between py-2 px-4 text-sm whitespace-nowrap space-x-2 w-full border rounded-full border-2-slate " />
           )}
         </div>
         <div className="flex items-center justify-between py-2 px-4 text-sm whitespace-nowrap space-x-2 w-full border rounded-full border-2-slate ">
@@ -59,7 +59,7 @@ export default function IdentificationInfo({ information }: any) {
           {information.issuer ? (
             <p>{information.issuer}</p>
           ) : (
-            <Skeleton className="w-[70%] px-3 h-[20px] rounded-full bg-gray-200" />
+            <Skeleton className="flex items-center justify-between py-2 px-4 text-sm whitespace-nowrap space-x-2 w-full border rounded-full border-2-slate " />
           )}
         </div>
         <div className="flex items-center justify-between py-2 px-4 text-sm whitespace-nowrap space-x-2 w-full border rounded-full border-2-slate ">
@@ -67,15 +67,15 @@ export default function IdentificationInfo({ information }: any) {
           {information.issueDate ? (
             <p>{information.issueDate}</p>
           ) : (
-            <Skeleton className="w-[70%] px-3 h-[20px] rounded-full bg-gray-200" />
+            <Skeleton className="flex items-center justify-between py-2 px-4 text-sm whitespace-nowrap space-x-2 w-full border rounded-full border-2-slate " />
           )}
         </div>
         <div className="flex items-center justify-between py-2 px-4 text-sm whitespace-nowrap space-x-2 w-full border rounded-full border-2-slate ">
           <p>Expiration</p>
-          {information.expiration ? (
+          {information.expirationDate ? (
             <p>{information.expiration}</p>
           ) : (
-            <Skeleton className="w-[70%] px-3 h-[20px] rounded-full bg-gray-200" />
+            <Skeleton className="flex items-center justify-between py-2 px-4 text-sm whitespace-nowrap space-x-2 w-full border rounded-full border-2-slate " />
           )}
         </div>
         <div className="flex items-center justify-between py-2 px-4 text-sm whitespace-nowrap space-x-2 w-full border rounded-full border-2-slate ">
@@ -83,7 +83,7 @@ export default function IdentificationInfo({ information }: any) {
           {information.nationality ? (
             <p>{information.nationality}</p>
           ) : (
-            <Skeleton className="w-[70%] px-3 h-[20px] rounded-full bg-gray-200" />
+            <Skeleton className="flex items-center justify-between py-2 px-4 text-sm whitespace-nowrap space-x-2 w-full border rounded-full border-2-slate " />
           )}
         </div>
         <div className="flex items-center justify-between py-2 px-4 text-sm whitespace-nowrap space-x-2 w-full border rounded-full border-2-slate ">
@@ -91,7 +91,7 @@ export default function IdentificationInfo({ information }: any) {
           {information.mother ? (
             <p>{information.mother}</p>
           ) : (
-            <Skeleton className="w-[70%] px-3 h-[20px] rounded-full bg-gray-200" />
+            <Skeleton className="flex items-center justify-between py-2 px-4 text-sm whitespace-nowrap space-x-2 w-full border rounded-full border-2-slate " />
           )}
         </div>
         <div className="flex items-center justify-between py-2 px-4 text-sm whitespace-nowrap space-x-2 w-full border rounded-full border-2-slate ">
@@ -99,7 +99,7 @@ export default function IdentificationInfo({ information }: any) {
           {information.father ? (
             <p>{information.father}</p>
           ) : (
-            <Skeleton className="w-[70%] px-3 h-[20px] rounded-full bg-gray-200" />
+            <Skeleton className="flex items-center justify-between py-2 px-4 text-sm whitespace-nowrap space-x-2 w-full border rounded-full border-2-slate " />
           )}
         </div>
       </div>

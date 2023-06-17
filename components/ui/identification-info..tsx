@@ -49,7 +49,7 @@ export default function IdentificationInfo({ information }: any) {
         <div className="flex items-center justify-between py-2 px-4 text-sm whitespace-nowrap space-x-2 w-full border rounded-full border-2-slate ">
           <p>Birth Date</p>
           {information.birthCertificate ? (
-            <p>{information.birth}</p>
+            <p>{information.birthCertificate}</p>
           ) : (
             <Skeleton className="flex items-center justify-between py-2 px-4 text-sm whitespace-nowrap space-x-2 w-full border rounded-full border-2-slate " />
           )}
@@ -73,7 +73,7 @@ export default function IdentificationInfo({ information }: any) {
         <div className="flex items-center justify-between py-2 px-4 text-sm whitespace-nowrap space-x-2 w-full border rounded-full border-2-slate ">
           <p>Expiration</p>
           {information.expirationDate ? (
-            <p>{information.expiration}</p>
+            <p>{information.expirationDate}</p>
           ) : (
             <Skeleton className="flex items-center justify-between py-2 px-4 text-sm whitespace-nowrap space-x-2 w-full border rounded-full border-2-slate " />
           )}

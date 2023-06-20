@@ -39,6 +39,7 @@ export default function GenerateQRCode() {
     mother: "Nicole Margaret van den Berg",
     father: "Charles Hendrik van den Berg",
   };
+
   return (
     <div
       style={{ height: "auto", margin: "0 auto", maxWidth: 200, width: "100%" }}

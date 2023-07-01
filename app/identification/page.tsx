@@ -8,7 +8,7 @@ import Result from "@zxing/library/esm/core/Result";
 import { useState } from "react";
 import GenerateQRCode from "../utilities/generateQRCode";
 import CameraComponent from "@/components/ui/profile-selfie";
-import { captureAndSendImage } from "api/profile-image";
+import { captureAndSendImage } from "@/app/api/profile-image";
 import { Skeleton } from "@/components/ui/skeleton";
 import IdentificationInfo from "@/components/ui/identification-info.";
 

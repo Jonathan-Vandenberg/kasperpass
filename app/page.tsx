@@ -67,6 +67,8 @@ export default function Page() {
     init();
   }, []);
 
+  console.log(provider);
+
   const login = async () => {
     if (!web3auth) {
       uiConsole("web3auth not initialized yet");
@@ -112,6 +114,7 @@ export default function Page() {
     const chainId = await rpc.getChainId();
     uiConsole(chainId);
   };
+
   const getAccounts = async () => {
     if (!provider) {
       uiConsole("provider not initialized yet");

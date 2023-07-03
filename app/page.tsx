@@ -9,7 +9,6 @@ import Container from "@/components/ui/container";
 import Image from "next/image";
 import image from "public/latina.png";
 import { useChat } from "ai/react";
-import GenerateQRCode from "./utilities/generateQRCode";
 import Wallet from "../components/svg/wallet";
 require("dotenv").config();
 
@@ -172,6 +171,8 @@ export default function Page() {
     }
   }
 
+
+
   const loggedInView = (
     <>
       <div className="">
@@ -259,11 +260,11 @@ export default function Page() {
             <Wallet width={28} height={28} stroke={1.3} />
           </Icon>
         </div>
-        <div className="relative flex items-center justify-center h-36 w-36 shrink-0 rounded-full mx-auto -mt-6 overflow-visible">
+        <div className="relative flex items-center justify-center h-32 w-32 shrink-0 rounded-full mx-auto -mt-6 overflow-visible aspect-square">
           <Image
             src={image}
-            width={500}
-            height={500}
+            width={300}
+            height={300}
             className="z-20 rounded-full"
             alt="Picture of the author"
           />
@@ -272,13 +273,13 @@ export default function Page() {
       <Container>
         <div className="w-full">
           <div className="flex flex-col items-center justify-center space-y-7">
-            <div className="flex">
-              {/* <div className="pr-2">
+            <div className="flex items-center justify-center">
+               <div className="pr-2">
                 <img
-                  src="https://hatscripts.github.io/circle-flags/flags/za.svg"
+                  src="https://hatscripts.github.io/circle-flags/flags/gr.svg"
                   width="40"
                 ></img>
-              </div> */}
+              </div>
               <div className="flex flex-col items-center justify-center">
                 <p className="text-2xl text-start w-full leading-widest font-semibold">
                   Triana Sofía González

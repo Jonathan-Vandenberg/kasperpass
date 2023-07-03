@@ -9,7 +9,6 @@ import Container from "@/components/ui/container";
 import Image from "next/image";
 import image from "public/latina.png";
 import { useChat } from "ai/react";
-import GenerateQRCode from "./utilities/generateQRCode";
 import Wallet from "../components/svg/wallet";
 require("dotenv").config();
 
